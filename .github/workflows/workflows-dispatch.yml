@@ -26,4 +26,4 @@ jobs:
            token: ${{ secrets.REPO_ACCESS_TOKEN }}
            repository: SD-MS-DevOps/IaC-DevOps
            event-type: ms-shipping
-           client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}", "repository": "${{ github.repository }}"}'
+           client-payload: '{"ref": "${{ steps.branch-names.outputs.ref_branch }}", "sha": "${{ github.sha }}", "repository": "${{ github.repository }}"}'
